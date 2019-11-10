@@ -28,10 +28,10 @@
 
 ### 安裝
 
-1.至 https://github.com/pcreem/thirdRest 畫面右側clone鍵下載專案
+1.至 https://github.com/pcreem/todo 畫面右側clone鍵下載專案
 
 2.初始
-cd thirdRest  //切至專案資料夾
+cd todo  //切至專案資料夾
 npm install  //安裝套件
 
 3.創建database,預設使用者及餐廳資料至 MySQL
