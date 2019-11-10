@@ -1,3 +1,44 @@
-<div>
-  todos
-</div>
+<h1>Todo List</h1>
+
+<a href='/todos/create'>
+  <button type="button" class="btn btn-primary">New Todo</button>
+</a>
+
+<br />
+<br />
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Status</th>
+      <th scope="col">Item</th>
+      <th scope="col">Deadline</th>
+      <th scope="col">Category</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each lists}}
+    {{#ifCond this.UserId ../user.id}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.status}}</td>
+      <td>{{this.item}}</td>
+      <td>{{this.deadline}}</td>
+      <td>{{this.category}}</td>
+      <td>
+        <button type="button" class="btn btn-link">
+          <a href="/todos/{{this.id}}/edit">
+            Edit
+          </a>
+        </button>
+        <form action="/todos/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
+          <button type="submit" class="btn btn-link">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {{/ifCond}}
+    {{/each}}
+  </tbody>
+</table>

@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       deadline: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       category: {
         type: Sequelize.STRING

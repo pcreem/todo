@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const List = sequelize.define('List', {
     status: DataTypes.STRING,
     item: DataTypes.STRING,
-    deadline: DataTypes.DATE,
+    deadline: DataTypes.DATEONLY,
     category: DataTypes.STRING,
     UserId: DataTypes.STRING
   }, {});
