@@ -24,6 +24,7 @@ module.exports = (app, passport) => {
   app.get('/todos/create', authenticated, todoController.createTodo)
   app.post('/todos', authenticated, todoController.postTodo)
   app.get('/todos/:id/edit', authenticated, todoController.editTodo)
+  app.get('/todos/:id', authenticated, todoController.getTodo)
   app.put('/todos/:id', authenticated, todoController.putTodo)
   app.delete('/todos/:id', authenticated, todoController.deleteTodo)
 

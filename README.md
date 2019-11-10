@@ -18,6 +18,8 @@
 
 ![image](https://github.com/pcreem/todo/blob/master/img/edit.png)
 
+![image](https://github.com/pcreem/todo/blob/master/img/show.png)
+
 
 ## 環境需求
 

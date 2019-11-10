@@ -71,6 +71,13 @@ const todoController = {
       })
   },
 
+  getTodo: (req, res) => {
+    return List.findByPk(req.params.id).then(todo => {
+      return res.render('todo', {
+        todo: todo
+      })
+    })
+  }
 
 
 }
